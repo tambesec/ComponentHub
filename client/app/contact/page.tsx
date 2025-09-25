@@ -2,13 +2,14 @@
 
 import React from "react"
 import Link from "next/link"
-import { Phone, Globe, ShoppingCart, User, Menu, X, MapPin, Search, Send, Mail, MessageSquare } from "lucide-react"
-import Footer from "../../src/components/Footer"
+import { MapPin, Search, Send, Mail, MessageSquare, User, Phone, Globe } from "lucide-react"
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
 
 export default function ContactPage() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const [formData, setFormData] = React.useState({
     name: "",
+    lastName: "",
     email: "",
     phone: "",
     country: "Việt Nam (VN)",
@@ -29,124 +30,8 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="w-full max-w-[1920px] mx-auto bg-[#e2e4eb] relative min-h-screen">
-      {/* Header */}
-      <header className="w-full max-w-[1300px] bg-white rounded-lg mx-auto mt-1 relative shadow-sm">
-        {/* Top Bar */}
-        <div className="flex items-center justify-between px-4 md:px-8 py-3 border-b border-gray-100">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2 bg-[#ebeef6] rounded px-3 py-1">
-              <Phone className="w-3 h-3" />
-              <span className="text-xs font-normal text-black hidden sm:inline">Hotline 24/7</span>
-            </div>
-            <span className="text-xs font-bold text-black">(025) 3886 25 16</span>
-          </div>
-
-          <div className="flex items-center gap-4 md:gap-6">
-            <div className="flex items-center gap-2">
-              <Globe className="w-4 h-4" />
-              <span className="text-sm text-black hidden sm:inline">USD</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-black hidden sm:inline">Eng</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Main Header */}
-        <div className="flex items-center justify-between px-4 md:px-8 py-4">
-          <div className="flex items-center gap-4 md:gap-8">
-            <div className="w-[120px] md:w-[161px] h-[30px] md:h-[40px]">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">S</span>
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-green-600 font-bold text-lg leading-none">SWOO</span>
-                  <span className="text-gray-600 text-xs leading-none">TECH MART</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-8">
-              <Link href="/" className="text-sm font-bold text-black uppercase hover:text-green-600 transition-colors">
-                Trang chủ
-              </Link>
-              <a href="#" className="text-sm font-bold text-black uppercase hover:text-green-600 transition-colors">
-                Danh mục sản phẩm
-              </a>
-              <a href="#" className="text-sm font-bold text-black uppercase hover:text-green-600 transition-colors">
-                Bài viết
-              </a>
-              <a href="#" className="text-sm font-bold text-green-600 uppercase">
-                Liên hệ
-              </a>
-            </nav>
-          </div>
-
-          <div className="flex items-center gap-2 md:gap-4">
-            {/* Desktop User Info */}
-            <div className="hidden md:flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <User className="w-4 h-4 text-gray-500" />
-                <div className="flex flex-col">
-                  <span className="text-xs text-gray-500 uppercase">chào mừng</span>
-                  <Link
-                    href="/login"
-                    className="text-sm font-bold text-black uppercase cursor-pointer hover:text-green-600 transition-colors"
-                  >
-                    Đăng nhập/Đăng ký
-                  </Link>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-gray-500 uppercase">số dư</span>
-                <span className="text-sm font-bold text-black">$1,089.00</span>
-              </div>
-            </div>
-
-            {/* Cart */}
-            <div className="relative">
-              <button className="w-10 h-10 bg-[#ebeef6] rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors">
-                <ShoppingCart className="w-5 h-5" />
-              </button>
-              <div className="absolute -top-1 -right-1 w-5 h-5 bg-green-600 rounded-full flex items-center justify-center">
-                <span className="text-xs text-white font-bold">5</span>
-              </div>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="lg:hidden w-10 h-10 flex items-center justify-center"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-gray-100 shadow-lg z-50">
-            <nav className="flex flex-col p-4 space-y-4">
-              <Link href="/" className="text-sm font-bold text-black uppercase hover:text-green-600">
-                Trang chủ
-              </Link>
-              <a href="#" className="text-sm font-bold text-black uppercase hover:text-green-600">
-                Danh mục sản phẩm
-              </a>
-              <a href="#" className="text-sm font-bold text-black uppercase hover:text-green-600">
-                Bài viết
-              </a>
-              <a href="#" className="text-sm font-bold text-green-600 uppercase">
-                Liên hệ
-              </a>
-            </nav>
-          </div>
-        )}
-      </header>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
 
       {/* Search Bar */}
       <div className="w-full max-w-[1300px] mx-auto mt-5 px-4 lg:px-0">
@@ -185,7 +70,7 @@ export default function ContactPage() {
             Trang chủ
           </Link>
           <span>/</span>
-          <span className="text-gray-800 font-medium">Chăm sóc khách hàng</span>
+          <span className="text-black font-medium">Liên hệ</span>
         </div>
       </div>
 
@@ -226,6 +111,8 @@ export default function ContactPage() {
                         <input
                           type="text"
                           name="lastName"
+                          value={formData.lastName}
+                          onChange={handleInputChange}
                           className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 outline-none"
                           required
                         />
@@ -385,10 +272,10 @@ export default function ContactPage() {
                   ))}
                 </div>
 
-                {/* Laptop Image */}
+                {/* Contact Image */}
                 <div className="mt-8">
                   <img
-                    src="/laptop-on-desk-with-hands-typing.jpg"
+                    src="/laptop-on-desk-with-hands-typing-customer-support.jpg"
                     alt="Contact support"
                     className="w-full h-64 object-cover rounded-lg"
                   />
@@ -405,8 +292,8 @@ export default function ContactPage() {
                 <div className="text-center">
                   <MapPin className="w-12 h-12 text-green-600 mx-auto mb-4" />
                   <p className="text-gray-600">Google Maps Integration</p>
-                  <p className="text-sm text-gray-500">Chiesa di San Francesco</p>
-                  <p className="text-sm text-gray-500">Piazza S.Francesco, 95100 Lioni LU</p>
+                  <p className="text-sm text-gray-500">SWOO Tech Mart</p>
+                  <p className="text-sm text-gray-500">Mân Thiện, Hiệp Phú, TP.HCM</p>
                 </div>
               </div>
             </div>

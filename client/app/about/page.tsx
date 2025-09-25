@@ -1,15 +1,9 @@
 "use client"
-\
-'../../src/components/Footerw I\'ll create the about page based on the about page image provided:
-
-<CodeProject id="Home11" taskNameActive="Creating about page" taskNameComplete="Created about page">
-
-```tsx file="app/about/page.tsx"
-'use client'
 
 import { Users, Award, TrendingUp } from "lucide-react"
-import Header from "../../src/components/Header"
-import Footer from "../../src/components/Footer"
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
+import Link from "next/link"
 
 export default function AboutPage() {
   const stats = [
@@ -33,33 +27,39 @@ export default function AboutPage() {
     {
       name: "Henry Berry",
       position: "CEO & Founder",
-      image: "/henry-berry.jpg",
     },
     {
       name: "Michael Edward",
       position: "CTO",
-      image: "/michael-edward.jpg",
     },
     {
       name: "Eden Howard",
       position: "Marketing Director",
-      image: "/eden-howard.jpg",
     },
     {
       name: "Robert Downey Jr",
       position: "Sales Director",
-      image: "/robert-downey.jpg",
     },
     {
       name: "Nathan Drake",
       position: "Product Manager",
-      image: "/nathan-drake.jpg",
     },
   ]
 
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
+
+      {/* Breadcrumb */}
+      <div className="w-[1300px] mx-auto px-8 py-4">
+        <div className="flex items-center gap-2 text-sm text-gray-600">
+          <Link href="/" className="hover:text-green-600">
+            Trang chủ
+          </Link>
+          <span>/</span>
+          <span className="text-black font-medium">Về chúng tôi</span>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-green-600 to-green-700 text-white py-20">
@@ -70,7 +70,7 @@ export default function AboutPage() {
             #1 Online Marketplace for Electronics & Technology in Vietnam, CA
           </p>
           <div className="flex justify-center">
-            <img src="/modern-office-building-with-delivery-boxes.jpg" alt="Company Building" className="rounded-lg shadow-2xl max-w-2xl" />
+            <img src="/modern-office-building-with-delivery-boxes-and-tec.jpg" alt="Company Building" className="rounded-lg shadow-2xl max-w-2xl" />
           </div>
         </div>
       </div>
@@ -134,7 +134,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div>
-              <img src="/happy-customer-service-team-working-together.jpg" alt="Our Team" className="rounded-lg shadow-lg" />
+              <img src="/happy-customer-service-team-working-together-in-mo.jpg" alt="Our Team" className="rounded-lg shadow-lg" />
             </div>
           </div>
         </div>
@@ -153,8 +153,8 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-2 gap-12 mb-16">
-            <img src="/modern-warehouse-with-technology-equipment.jpg" alt="Our Warehouse" className="rounded-lg shadow-lg" />
-            <img src="/customer-using-laptop-for-online-shopping.jpg" alt="Customer Experience" className="rounded-lg shadow-lg" />
+            <img src="/modern-warehouse-with-technology-equipment-and-log.jpg" alt="Our Warehouse" className="rounded-lg shadow-lg" />
+            <img src="/customer-using-laptop-for-online-shopping-experien.jpg" alt="Customer Experience" className="rounded-lg shadow-lg" />
           </div>
         </div>
       </div>
@@ -172,7 +172,7 @@ export default function AboutPage() {
               {timeline.slice(0, 4).map((item, index) => (
                 <div key={index} className="flex gap-4 mb-8">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">
+                    <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
                       {item.year}
                     </div>
                   </div>
@@ -186,7 +186,7 @@ export default function AboutPage() {
               {timeline.slice(4).map((item, index) => (
                 <div key={index} className="flex gap-4 mb-8">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center font-bold">
+                    <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-sm">
                       {item.year}
                     </div>
                   </div>
@@ -213,7 +213,7 @@ export default function AboutPage() {
               <div key={index} className="text-center">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <img
-                    src={`/professional-business-person.png?height=128&width=128&query=professional business person ${leader.name}`}
+                    src={`/professional-business-person.png?height=128&width=128&query=professional business person ${leader.name} portrait`}
                     alt={leader.name}
                     className="w-full h-full object-cover"
                   />
