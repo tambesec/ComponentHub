@@ -1,4 +1,5 @@
-import Header from "../src/components/Header"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 import SearchBar from "../src/components/SearchBar"
 import CategorySidebar from "../src/components/CategorySidebar"
 import HeroSlider from "../src/components/HeroSlider"
@@ -7,81 +8,85 @@ import BrandSection from "../src/components/BrandSection"
 import CategorySection from "../src/components/CategorySection"
 import FeaturedProducts from "../src/components/FeaturedProducts"
 import NewsletterSection from "../src/components/NewsletterSection"
-import Footer from "../src/components/Footer"
+import AnimatedSection from "../components/AnimatedSection"
 
 export default function HomePage() {
   return (
     <div className="w-full max-w-[1920px] mx-auto bg-[#e2e4eb] relative min-h-screen">
       {/* Header */}
-      <div className="px-4 lg:px-0">
+      <AnimatedSection className="px-4 lg:px-0">
         <Header />
-      </div>
+      </AnimatedSection>
 
       {/* Search Bar */}
-      <div className="px-4 lg:px-0">
+      <AnimatedSection className="px-4 lg:px-0" delay={0.1}>
         <SearchBar />
-      </div>
+      </AnimatedSection>
 
       {/* Main Content */}
       <div className="w-full max-w-[1300px] mx-auto mt-5 px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row gap-5">
           {/* Category Sidebar */}
-          <div className="lg:w-[309px]">
+          <AnimatedSection className="lg:w-[309px]" delay={0.2} direction="left">
             <CategorySidebar />
-          </div>
+          </AnimatedSection>
 
           {/* Hero Slider */}
-          <div className="flex-1 lg:w-[650px]">
+          <AnimatedSection className="flex-1 lg:w-[650px]" delay={0.3}>
             <HeroSlider />
-          </div>
+          </AnimatedSection>
 
           {/* Side Banners */}
-          <div className="flex flex-row lg:flex-col gap-4 lg:w-[309px]">
+          <AnimatedSection className="flex flex-row lg:flex-col gap-4 lg:w-[309px]" delay={0.4} direction="right">
             <div className="flex-1 lg:w-[309px] h-[150px] lg:h-[215px] bg-white rounded-lg overflow-hidden shadow-sm">
               <img
-                src="/network-devices-banner.jpg"
+                src="/network-devices-collection-banner.jpg"
                 alt="Network Devices Collection"
-                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
             <div className="flex-1 lg:w-[309px] h-[150px] lg:h-[215px] bg-white rounded-lg overflow-hidden shadow-sm">
               <img
-                src="/router-wifi6-tplink.jpg"
+                src="/router-wifi-6-tp-link-banner.jpg"
                 alt="Router Wifi 6 Banner"
-                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
 
       {/* Brand and Category Sections */}
       <div className="w-full max-w-[1300px] mx-auto mt-8 px-4 lg:px-0">
         <div className="flex flex-col lg:flex-row gap-8">
-          <BrandSection />
-          <CategorySection />
+          <AnimatedSection delay={0.5} direction="left">
+            <BrandSection />
+          </AnimatedSection>
+          <AnimatedSection delay={0.6} direction="right">
+            <CategorySection />
+          </AnimatedSection>
         </div>
       </div>
 
       {/* Newsletter */}
-      <div className="px-4 lg:px-0">
+      <AnimatedSection className="px-4 lg:px-0" delay={0.7}>
         <NewsletterSection />
-      </div>
+      </AnimatedSection>
 
       {/* Featured Products */}
-      <div className="px-4 lg:px-0">
+      <AnimatedSection className="px-4 lg:px-0" delay={0.8}>
         <FeaturedProducts />
-      </div>
+      </AnimatedSection>
 
       {/* Product Grid */}
-      <div className="px-4 lg:px-0">
+      <AnimatedSection className="px-4 lg:px-0" delay={0.9}>
         <ProductGrid />
-      </div>
+      </AnimatedSection>
 
       {/* Footer */}
-      <Footer />
+      <AnimatedSection delay={1.0}>
+        <Footer />
+      </AnimatedSection>
     </div>
   )
 }
