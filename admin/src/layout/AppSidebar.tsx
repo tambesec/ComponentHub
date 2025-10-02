@@ -29,36 +29,36 @@ type NavItem = {
 const navItems: NavItem[] = [
   {
     icon: <GridIcon />,
-    name: "Dashboard",
-    subItems: [{ name: "Ecommerce", path: "/", pro: false }],
+    name: "Trang chủ",
+    subItems: [{ name: "Thương mại điện tử", path: "/", pro: false }],
   },
   {
     icon: <CalenderIcon />,
-    name: "Calendar",
+    name: "Lịch",
     path: "/calendar",
   },
   {
     icon: <UserCircleIcon />,
-    name: "User Profile",
+    name: "Hồ sơ người dùng",
     path: "/profile",
   },
 
   {
-    name: "Forms",
+    name: "Biểu mẫu",
     icon: <ListIcon />,
-    subItems: [{ name: "Form Elements", path: "/form-elements", pro: false }],
+    subItems: [{ name: "Các phần tử biểu mẫu", path: "/form-elements", pro: false }],
   },
   {
-    name: "Tables",
+    name: "Bảng dữ liệu",
     icon: <TableIcon />,
-    subItems: [{ name: "Basic Tables", path: "/basic-tables", pro: false }],
+    subItems: [{ name: "Bảng cơ bản", path: "/basic-tables", pro: false }],
   },
   {
-    name: "Pages",
+    name: "Trang",
     icon: <PageIcon />,
     subItems: [
-      { name: "Blank Page", path: "/blank", pro: false },
-      { name: "404 Error", path: "/error-404", pro: false },
+      { name: "Trang trống", path: "/blank", pro: false },
+      { name: "Lỗi 404", path: "/error-404", pro: false },
     ],
   },
 ];
@@ -66,30 +66,30 @@ const navItems: NavItem[] = [
 const othersItems: NavItem[] = [
   {
     icon: <PieChartIcon />,
-    name: "Charts",
+    name: "Biểu đồ",
     subItems: [
-      { name: "Line Chart", path: "/line-chart", pro: false },
-      { name: "Bar Chart", path: "/bar-chart", pro: false },
+      { name: "Biểu đồ đường", path: "/line-chart", pro: false },
+      { name: "Biểu đồ cột", path: "/bar-chart", pro: false },
     ],
   },
   {
     icon: <BoxCubeIcon />,
-    name: "UI Elements",
+    name: "Thành phần giao diện",
     subItems: [
-      { name: "Alerts", path: "/alerts", pro: false },
-      { name: "Avatar", path: "/avatars", pro: false },
-      { name: "Badge", path: "/badge", pro: false },
-      { name: "Buttons", path: "/buttons", pro: false },
-      { name: "Images", path: "/images", pro: false },
-      { name: "Videos", path: "/videos", pro: false },
+      { name: "Cảnh báo", path: "/alerts", pro: false },
+      { name: "Ảnh đại diện", path: "/avatars", pro: false },
+      { name: "Huy hiệu", path: "/badge", pro: false },
+      { name: "Nút bấm", path: "/buttons", pro: false },
+      { name: "Hình ảnh", path: "/images", pro: false },
+      { name: "Video", path: "/videos", pro: false },
     ],
   },
   {
     icon: <PlugInIcon />,
-    name: "Authentication",
+    name: "Xác thực",
     subItems: [
-      { name: "Sign In", path: "/signin", pro: false },
-      { name: "Sign Up", path: "/signup", pro: false },
+      { name: "Đăng nhập", path: "/signin", pro: false },
+      { name: "Đăng ký", path: "/signup", pro: false },
     ],
   },
 ];
@@ -198,7 +198,7 @@ const AppSidebar: React.FC = () => {
                                 : "menu-dropdown-badge-inactive"
                             } menu-dropdown-badge `}
                           >
-                            new
+                            mới
                           </span>
                         )}
                         {subItem.pro && (
@@ -348,7 +348,7 @@ const AppSidebar: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Menu"
+                  "Danh mục"
                 ) : (
                   <HorizontaLDots />
                 )}
@@ -365,7 +365,7 @@ const AppSidebar: React.FC = () => {
                 }`}
               >
                 {isExpanded || isHovered || isMobileOpen ? (
-                  "Others"
+                  "Khác"
                 ) : (
                   <HorizontaLDots />
                 )}
