@@ -116,9 +116,10 @@ const Header = () => {
           </div>
 
           {/* <!-- header top right --> */}
-          <div className="flex w-full lg:w-auto items-center gap-7.5">
-            <div className="hidden xl:flex items-center gap-3.5">
+          <div className="flex w-full lg:w-auto items-center gap-3 xl:gap-7.5">
+            <div className="hidden lg:flex items-center gap-2 xl:gap-3.5">
               <svg
+                className="flex-shrink-0"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
@@ -143,23 +144,24 @@ const Header = () => {
                 />
               </svg>
 
-              <div>
-                <span className="block text-2xs text-dark-4 uppercase">
+              <div className="min-w-0">
+                <span className="block text-2xs text-dark-4 uppercase whitespace-nowrap">
                   24/7 SUPPORT
                 </span>
-                <p className="font-medium text-custom-sm text-dark">
+                <p className="font-medium text-custom-sm text-dark whitespace-nowrap">
                   (+965) 7492-3477
                 </p>
               </div>
             </div>
 
             {/* <!-- divider --> */}
-            <span className="hidden xl:block w-px h-7.5 bg-gray-4"></span>
+            <span className="hidden lg:block w-px h-7.5 bg-gray-4"></span>
 
-            <div className="flex w-full lg:w-auto justify-between items-center gap-5">
-              <div className="flex items-center gap-5">
-                <Link href="/signin" className="flex items-center gap-2.5">
+            <div className="flex w-full lg:w-auto justify-between items-center gap-3 xl:gap-5">
+              <div className="flex items-center gap-3 xl:gap-5">
+                <Link href="/signin" className="flex items-center gap-1.5 xl:gap-2.5">
                   <svg
+                    className="flex-shrink-0"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -180,11 +182,11 @@ const Header = () => {
                     />
                   </svg>
 
-                  <div>
-                    <span className="block text-2xs text-dark-4 uppercase">
+                  <div className="min-w-0">
+                    <span className="block text-2xs text-dark-4 uppercase whitespace-nowrap">
                       Tài khoản
                     </span>
-                    <p className="font-medium text-custom-sm text-dark">
+                    <p className="font-medium text-custom-sm text-dark whitespace-nowrap">
                       Đăng nhập
                     </p>
                   </div>
@@ -192,9 +194,9 @@ const Header = () => {
 
                 <button
                   onClick={handleOpenCartModal}
-                  className="flex items-center gap-2.5"
+                  className="flex items-center gap-1.5 xl:gap-2.5"
                 >
-                  <span className="inline-block relative">
+                  <span className="inline-block relative flex-shrink-0">
                     <svg
                       width="24"
                       height="24"
@@ -231,11 +233,11 @@ const Header = () => {
                     </span>
                   </span>
 
-                  <div>
-                    <span className="block text-2xs text-dark-4 uppercase">
+                  <div className="min-w-0">
+                    <span className="block text-2xs text-dark-4 uppercase whitespace-nowrap">
                       Giỏ hàng
                     </span>
-                    <p className="font-medium text-custom-sm text-dark">
+                    <p className="font-medium text-custom-sm text-dark whitespace-nowrap">
                       {totalPrice.toLocaleString('vi-VN')}đ
                     </p>
                   </div>
