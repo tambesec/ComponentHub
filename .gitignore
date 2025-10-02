@@ -1,0 +1,8 @@
+.config/
+
+.env
+
+mcp.json
+builder.json
+.vscode/
+.config/
