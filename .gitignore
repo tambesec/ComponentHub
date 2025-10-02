@@ -1,0 +1,9 @@
+.config/
+
+.env
+
+mcp.json
+builder.json
+
+.vscode
+node_modules/
