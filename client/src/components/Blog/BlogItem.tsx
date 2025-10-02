@@ -1,9 +1,9 @@
 import React from "react";
-import { BlogItem } from "@/types/blogItem";
+import type { BlogItem as BlogItemType } from "@/types/blogItem";
 import Image from "next/image";
 import Link from "next/link";
 
-const BlogItem = ({ blog }: { blog: BlogItem }) => {
+const BlogItem = ({ blog }: { blog: BlogItemType }) => {
   return (
     <div className="shadow-1 bg-white rounded-xl px-4 sm:px-5 pt-5 pb-4">
       <Link href="/blogs/blog-details" className="rounded-md overflow-hidden">
