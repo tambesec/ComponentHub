@@ -4,5 +4,11 @@
 
 mcp.json
 builder.json
+<<<<<<< HEAD
 .vscode/
 .config/
+=======
+
+.vscode
+node_modules/
+>>>>>>> tam_frontend
