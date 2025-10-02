@@ -2,8 +2,8 @@ import Signin from "@/components/Auth/Signin";
 import React from "react";
 import { Metadata } from "next";
 export const metadata: Metadata = {
-  title: "Signin Page | NextCommerce Nextjs E-commerce template",
-  description: "This is Signin Page for NextCommerce Template",
+  title: "Đăng Nhập - NetTechPro",
+  description: "Đăng nhập vào tài khoản NetTechPro để quản lý đơn hàng và nhận ưu đãi đặc biệt",
   // other metadata
 };
 

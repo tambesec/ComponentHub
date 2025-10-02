@@ -182,10 +182,10 @@ const Header = () => {
 
                   <div>
                     <span className="block text-2xs text-dark-4 uppercase">
-                      account
+                      Tài khoản
                     </span>
                     <p className="font-medium text-custom-sm text-dark">
-                      Sign In
+                      Đăng nhập
                     </p>
                   </div>
                 </Link>
@@ -233,10 +233,10 @@ const Header = () => {
 
                   <div>
                     <span className="block text-2xs text-dark-4 uppercase">
-                      cart
+                      Giỏ hàng
                     </span>
                     <p className="font-medium text-custom-sm text-dark">
-                      ${totalPrice}
+                      {totalPrice.toLocaleString('vi-VN')}đ
                     </p>
                   </div>
                 </button>
