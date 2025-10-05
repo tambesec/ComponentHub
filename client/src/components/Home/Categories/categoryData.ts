@@ -1,36 +1,36 @@
 const data = [
   {
-    title: "Televisions",
+    title: "Card mạng",
     id: 1,
     img: "/images/categories/categories-01.png",
   },
   {
-    title: "Laptop & PC",
+    title: "Hub & Switch",
     id: 2,
     img: "/images/categories/categories-02.png",
   },
   {
-    title: "Mobile & Tablets",
+    title: "Router",
     id: 3,
     img: "/images/categories/categories-03.png",
   },
   {
-    title: "Games & Videos",
+    title: "Bộ phát sóng WiFi",
     id: 4,
     img: "/images/categories/categories-04.png",
   },
   {
-    title: "Home Appliances",
+    title: "USB WiFi",
     id: 5,
     img: "/images/categories/categories-05.png",
   },
   {
-    title: "Health & Sports",
+    title: "Cáp mạng",
     id: 6,
     img: "/images/categories/categories-06.png",
   },
   {
-    title: "Watches",
+    title: "Phụ kiện mạng",
     id: 7,
     img: "/images/categories/categories-07.png",
   },

@@ -62,12 +62,20 @@ const Header = () => {
         >
           {/* <!-- header top left --> */}
           <div className="xl:w-auto flex-col sm:flex-row w-full flex sm:justify-between sm:items-center gap-5 sm:gap-10">
-            <Link className="flex-shrink-0" href="/">
+            <Link 
+              className="flex-shrink-0" 
+              href="/"
+              onClick={() => {
+                setNavigationOpen(false);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
               <Image
                 src="/images/logo/logo.svg"
                 alt="Logo"
                 width={219}
                 height={36}
+                priority
               />
             </Link>
 

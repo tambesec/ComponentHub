@@ -1,10 +1,10 @@
 import { Product } from "@/types/product";
 const shopData: Product[] = [
   {
-    title: "Havit HV-G69 USB Gamepad",
-    reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "TP-Link TL-WN725N - USB WiFi Nano 150Mbps",
+    reviews: 128,
+    price: 120000,
+    discountedPrice: 85000,
     id: 1,
     imgs: {
       thumbnails: [
@@ -18,10 +18,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "iPhone 14 Plus , 6/128GB",
-    reviews: 5,
-    price: 899.0,
-    discountedPrice: 99.0,
+    title: "TP-Link Archer C6 - Router WiFi AC1200 MU-MIMO",
+    reviews: 89,
+    price: 850000,
+    discountedPrice: 650000,
     id: 2,
     imgs: {
       thumbnails: [
@@ -35,10 +35,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Apple iMac M1 24-inch 2021",
-    reviews: 5,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "TP-Link TL-SG105 - Switch 5 cổng Gigabit",
+    reviews: 56,
+    price: 550000,
+    discountedPrice: 450000,
     id: 3,
     imgs: {
       thumbnails: [
@@ -52,10 +52,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "MacBook Air M1 chip, 8/256GB",
-    reviews: 6,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "Asus RT-AX55 - Router WiFi 6 AX1800",
+    reviews: 72,
+    price: 1500000,
+    discountedPrice: 1200000,
     id: 4,
     imgs: {
       thumbnails: [
@@ -69,10 +69,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Apple Watch Ultra",
-    reviews: 3,
-    price: 99.0,
-    discountedPrice: 29.0,
+    title: "TP-Link EAP245 - Access Point WiFi AC1750 MU-MIMO",
+    reviews: 43,
+    price: 2200000,
+    discountedPrice: 1800000,
     id: 5,
     imgs: {
       thumbnails: [
@@ -86,10 +86,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Logitech MX Master 3 Mouse",
-    reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "Cáp mạng Cat6 UTP Commscope - 100m",
+    reviews: 95,
+    price: 1200000,
+    discountedPrice: 950000,
     id: 6,
     imgs: {
       thumbnails: [
@@ -103,10 +103,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Apple iPad Air 5th Gen - 64GB",
-    reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "TP-Link Deco M5 AC1300 - Hệ thống Mesh WiFi 3 pack",
+    reviews: 67,
+    price: 3000000,
+    discountedPrice: 2500000,
     id: 7,
     imgs: {
       thumbnails: [
@@ -120,10 +120,10 @@ const shopData: Product[] = [
     },
   },
   {
-    title: "Asus RT Dual Band Router",
-    reviews: 15,
-    price: 59.0,
-    discountedPrice: 29.0,
+    title: "D-Link DGS-1008P - Switch 8 cổng Gigabit PoE",
+    reviews: 38,
+    price: 2100000,
+    discountedPrice: 1650000,
     id: 8,
     imgs: {
       thumbnails: [

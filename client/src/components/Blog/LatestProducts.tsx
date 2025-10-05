@@ -22,7 +22,7 @@ const LatestProducts = ({ products }) => {
                 <h3 className="font-medium text-dark mb-1 ease-out duration-200 hover:text-blue">
                   <Link href="/shop-details"> {product.title} </Link>
                 </h3>
-                <p className="text-custom-sm">Price: ${product.price}</p>
+                <p className="text-custom-sm">Giá: {product.price.toLocaleString('vi-VN')}đ</p>
               </div>
             </div>
           ))}

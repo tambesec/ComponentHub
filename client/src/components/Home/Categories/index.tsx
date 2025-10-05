@@ -73,7 +73,7 @@ const Categories = () => {
                 Categories
               </span>
               <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
-                Browse by Category
+                Danh mục sản phẩm
               </h2>
             </div>
 

@@ -70,7 +70,7 @@ const SingleItem = ({ item }) => {
       </div>
 
       <div className="min-w-[205px]">
-        <p className="text-dark">${item.discountedPrice}</p>
+        <p className="text-dark">{item.discountedPrice.toLocaleString('vi-VN')}đ</p>
       </div>
 
       <div className="min-w-[265px]">

@@ -38,25 +38,25 @@ const HeroCarousal = () => {
             </div>
 
             <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-              <a href="#">True Wireless Noise Cancelling Headphone</a>
+              <a href="#">Router WiFi 6 Asus RT-AX55 - Tốc độ vượt trội</a>
             </h1>
 
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at ipsum at risus euismod lobortis in
+            Trải nghiệm mạng không dây thế hệ mới với WiFi 6, tốc độ lên đến 1800Mbps. Phủ sóng rộng, kết nối ổn định cho mọi không gian.
             </p>
 
             <a
               href="#"
               className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3 px-9 ease-out duration-200 hover:bg-blue mt-10"
             >
-              Shop Now
+              Mua ngay
             </a>
           </div>
 
           <div>
             <Image
               src="/images/hero/hero-01.png"
-              alt="headphone"
+              alt="router wifi 6"
               width={351}
               height={358}
             />
@@ -79,26 +79,25 @@ const HeroCarousal = () => {
             </div>
 
             <h1 className="font-semibold text-dark text-xl sm:text-3xl mb-3">
-              <a href="#">True Wireless Noise Cancelling Headphone</a>
+              <a href="#">Hệ thống Mesh WiFi TP-Link Deco M5 - Phủ sóng toàn diện</a>
             </h1>
 
             <p>
-              Lorem ipsum dolor sit, consectetur elit nunc suscipit non ipsum
-              nec suscipit.
+              Giải pháp WiFi Mesh thông minh, tự động chuyển đổi điểm phát. Phủ sóng đến 500m², không gian chết, kết nối liền mạch.
             </p>
 
             <a
               href="#"
               className="inline-flex font-medium text-white text-custom-sm rounded-md bg-dark py-3 px-9 ease-out duration-200 hover:bg-blue mt-10"
             >
-              Shop Now
+              Khám phá ngay
             </a>
           </div>
 
           <div>
             <Image
               src="/images/hero/hero-01.png"
-              alt="headphone"
+              alt="mesh wifi system"
               width={351}
               height={358}
             />

@@ -152,8 +152,8 @@ const SingleGridItem = ({ item }: { item: Product }) => {
       </h3>
 
       <span className="flex items-center gap-2 font-medium text-lg">
-        <span className="text-dark">${item.discountedPrice}</span>
-        <span className="text-dark-4 line-through">${item.price}</span>
+        <span className="text-dark">{item.discountedPrice.toLocaleString('vi-VN')}đ</span>
+        <span className="text-dark-4 line-through">{item.price.toLocaleString('vi-VN')}đ</span>
       </span>
     </div>
   );

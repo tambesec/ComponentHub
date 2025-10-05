@@ -1,6 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "type": "module",
   "description": "API Node.js (Express) cho website bán linh kiện điện tử ComponentHub",
   "main": "index.js",
   "scripts": {

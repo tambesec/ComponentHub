@@ -18,16 +18,16 @@ const BestSeller = () => {
                 width={17}
                 height={17}
               />
-              This Month
+              Tháng này
             </span>
             <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
-              Best Sellers
+              Bán chạy nhất
             </h2>
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7.5">
-          {/* <!-- Best Sellers item --> */}
+          {/* <!-- Bán chạy nhất item --> */}
           {shopData.slice(1, 7).map((item, key) => (
             <SingleItem item={item} key={key} />
           ))}

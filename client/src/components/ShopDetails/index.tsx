@@ -317,11 +317,11 @@ const ShopDetails = () => {
 
                   <h3 className="font-medium text-custom-1 mb-4.5">
                     <span className="text-sm sm:text-base text-dark">
-                      Price: ${product.price}
+                      Price: {product.price.toLocaleString('vi-VN')}đ
                     </span>
                     <span className="line-through">
                       {" "}
-                      ${product.discountedPrice}{" "}
+                      {product.discountedPrice.toLocaleString('vi-VN')}đ{" "}
                     </span>
                   </h3>
 

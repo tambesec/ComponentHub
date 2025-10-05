@@ -47,7 +47,7 @@ const OrderSummary = () => {
             </div>
             <div>
               <p className="font-medium text-lg text-dark text-right">
-                ${totalPrice}
+                {totalPrice.toLocaleString('vi-VN')}đ
               </p>
             </div>
           </div>
