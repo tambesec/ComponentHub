@@ -151,8 +151,8 @@ const ShopWithSidebar = () => {
                   {/* <!-- filter box --> */}
                   <div className="bg-white shadow-1 rounded-lg py-4 px-5">
                     <div className="flex items-center justify-between">
-                      <p>Filters:</p>
-                      <button className="text-blue">Clean All</button>
+                      <p>Bộ lọc:</p>
+                      <button className="text-blue">Xóa tất cả</button>
                     </div>
                   </div>
 
@@ -184,8 +184,8 @@ const ShopWithSidebar = () => {
                     <CustomSelect options={options} />
 
                     <p>
-                      Showing <span className="text-dark">9 of 50</span>{" "}
-                      Products
+                      Hiển thị <span className="text-dark">9 trong số 50</span>{" "}
+                      sản phẩm
                     </p>
                   </div>
 

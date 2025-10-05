@@ -63,7 +63,7 @@ const CategoryDropdown = ({ categories }) => {
           toggleDropdown && "shadow-filter"
         }`}
       >
-        <p className="text-dark">Category</p>
+        <p className="text-dark">Danh mục</p>
         <button
           aria-label="button for category dropdown"
           className={`text-dark ease-out duration-200 ${

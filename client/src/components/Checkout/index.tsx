@@ -11,7 +11,7 @@ import Billing from "./Billing";
 const Checkout = () => {
   return (
     <>
-      <Breadcrumb title={"Checkout"} pages={["checkout"]} />
+      <Breadcrumb title={"Thanh toán"} pages={["thanh toán"]} />
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <form>
@@ -31,14 +31,14 @@ const Checkout = () => {
                 <div className="bg-white shadow-1 rounded-[10px] p-4 sm:p-8.5 mt-7.5">
                   <div>
                     <label htmlFor="notes" className="block mb-2.5">
-                      Other Notes (optional)
+                      Ghi chú thêm (không bắt buộc)
                     </label>
 
                     <textarea
                       name="notes"
                       id="notes"
                       rows={5}
-                      placeholder="Notes about your order, e.g. speacial notes for delivery."
+                      placeholder="Ghi chú về đơn hàng của bạn, ví dụ: lưu ý đặc biệt cho việc giao hàng..."
                       className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full p-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                     ></textarea>
                   </div>
@@ -51,7 +51,7 @@ const Checkout = () => {
                 <div className="bg-white shadow-1 rounded-[10px]">
                   <div className="border-b border-gray-3 py-5 px-4 sm:px-8.5">
                     <h3 className="font-medium text-xl text-dark">
-                      Your Order
+                      Giỏ hàng của bạn
                     </h3>
                   </div>
 
@@ -59,11 +59,11 @@ const Checkout = () => {
                     {/* <!-- title --> */}
                     <div className="flex items-center justify-between py-5 border-b border-gray-3">
                       <div>
-                        <h4 className="font-medium text-dark">Product</h4>
+                        <h4 className="font-medium text-dark">Sản phẩm</h4>
                       </div>
                       <div>
                         <h4 className="font-medium text-dark text-right">
-                          Subtotal
+                          Tổng phụ
                         </h4>
                       </div>
                     </div>
@@ -71,51 +71,51 @@ const Checkout = () => {
                     {/* <!-- product item --> */}
                     <div className="flex items-center justify-between py-5 border-b border-gray-3">
                       <div>
-                        <p className="text-dark">iPhone 14 Plus , 6/128GB</p>
+                        <p className="text-dark">Router WiFi 6 Asus RT-AX55</p>
                       </div>
                       <div>
-                        <p className="text-dark text-right">$899.00</p>
-                      </div>
-                    </div>
-
-                    {/* <!-- product item --> */}
-                    <div className="flex items-center justify-between py-5 border-b border-gray-3">
-                      <div>
-                        <p className="text-dark">Asus RT Dual Band Router</p>
-                      </div>
-                      <div>
-                        <p className="text-dark text-right">$129.00</p>
+                        <p className="text-dark text-right">2.500.000đ</p>
                       </div>
                     </div>
 
                     {/* <!-- product item --> */}
                     <div className="flex items-center justify-between py-5 border-b border-gray-3">
                       <div>
-                        <p className="text-dark">Havit HV-G69 USB Gamepad</p>
+                        <p className="text-dark">Switch TP-Link 24 Port</p>
                       </div>
                       <div>
-                        <p className="text-dark text-right">$29.00</p>
+                        <p className="text-dark text-right">1.800.000đ</p>
                       </div>
                     </div>
 
                     {/* <!-- product item --> */}
                     <div className="flex items-center justify-between py-5 border-b border-gray-3">
                       <div>
-                        <p className="text-dark">Shipping Fee</p>
+                        <p className="text-dark">Card mạng Gigabit PCI-E</p>
                       </div>
                       <div>
-                        <p className="text-dark text-right">$15.00</p>
+                        <p className="text-dark text-right">450.000đ</p>
+                      </div>
+                    </div>
+
+                    {/* <!-- product item --> */}
+                    <div className="flex items-center justify-between py-5 border-b border-gray-3">
+                      <div>
+                        <p className="text-dark">Phí vận chuyển</p>
+                      </div>
+                      <div>
+                        <p className="text-dark text-right">30.000đ</p>
                       </div>
                     </div>
 
                     {/* <!-- total --> */}
                     <div className="flex items-center justify-between pt-5">
                       <div>
-                        <p className="font-medium text-lg text-dark">Total</p>
+                        <p className="font-medium text-lg text-dark">Tổng</p>
                       </div>
                       <div>
                         <p className="font-medium text-lg text-dark text-right">
-                          $1072.00
+                          4.780.000đ
                         </p>
                       </div>
                     </div>
@@ -136,7 +136,7 @@ const Checkout = () => {
                   type="submit"
                   className="w-full flex justify-center font-medium text-white bg-blue py-3 px-6 rounded-md ease-out duration-200 hover:bg-blue-dark mt-7.5"
                 >
-                  Process to Checkout
+                  Tiến hành thanh toán
                 </button>
               </div>
             </div>
