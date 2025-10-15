@@ -54,11 +54,56 @@ app.use('/api/auth', authRouter);
 
 // Swagger UI (serves server/openapi.yaml)
 const specPath = path.resolve(__dirname, '../openapi.yaml');
-const swaggerDocument = fs.existsSync(specPath) ? YAML.load(specPath) : {};
-app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
+// Check if file exists
+if (!fs.existsSync(specPath)) {
+  console.error('❌ openapi.yaml not found at:', specPath);
+} else {
+  console.log('✅ openapi.yaml found at:', specPath);
+}
+
+// Load OpenAPI spec
+const swaggerDocument = fs.existsSync(specPath) ? YAML.load(specPath) : null;
+
+if (!swaggerDocument) {
+  console.error('❌ Failed to load OpenAPI specification');
+} else {
+  console.log('✅ OpenAPI specification loaded successfully');
+  console.log('   Title:', swaggerDocument.info?.title);
+  console.log('   Version:', swaggerDocument.info?.version);
+  console.log('   Paths:', Object.keys(swaggerDocument.paths || {}).length);
+}
+
+// Swagger UI options
+const swaggerOptions = {
+  explorer: true,
+  swaggerOptions: {
+    persistAuthorization: true,
+    displayRequestDuration: true,
+    docExpansion: 'list', // 'list' | 'full' | 'none'
+    defaultModelsExpandDepth: 3,
+    defaultModelExpandDepth: 3,
+    filter: true,
+    showExtensions: true,
+    showCommonExtensions: true,
+    tryItOutEnabled: true,
+  },
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: 'NetTechPro API Documentation',
+};
+
+// Setup Swagger UI
+app.use('/docs', swaggerUi.serve);
+app.get('/docs', swaggerUi.setup(swaggerDocument, swaggerOptions));
+
+// Serve raw OpenAPI YAML
 app.get('/openapi.yaml', (_req: Request, res: Response) => {
-  res.setHeader('Content-Type', 'application/yaml');
-  res.send(fs.readFileSync(specPath, 'utf8'));
+  if (fs.existsSync(specPath)) {
+    res.setHeader('Content-Type', 'application/yaml');
+    res.send(fs.readFileSync(specPath, 'utf8'));
+  } else {
+    res.status(404).json({ error: 'OpenAPI spec not found' });
+  }
 });
 
 // Basic error handler
