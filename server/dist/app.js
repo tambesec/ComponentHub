@@ -1,0 +1,56 @@
+import express from 'express';
+import cors from 'cors';
+import path from 'path';
+import fs from 'fs';
+import YAML from 'yamljs';
+import swaggerUi from 'swagger-ui-express';
+import dotenv from 'dotenv';
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
+const app = express();
+// CORS - Support multiple origins
+const webOrigin = process.env.WEB_ORIGIN || 'http://localhost:5173,http://localhost:3001';
+const allowedOrigins = webOrigin.split(',').map(origin => origin.trim());
+app.use(cors({
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        }
+        else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
+    credentials: true
+}));
+// JSON parsing
+app.use(express.json());
+// Routes
+import healthRouter from './routes/health.js';
+import productsRouter from './routes/products.js';
+import categoriesRouter from './routes/categories.js';
+import brandsRouter from './routes/brands.js';
+import cartRouter from './routes/cart.js';
+import ordersRouter from './routes/orders.js';
+import authRouter from './routes/auth.js';
+app.use('/api/health', healthRouter);
+app.use('/api/products', productsRouter);
+app.use('/api/categories', categoriesRouter);
+app.use('/api/brands', brandsRouter);
+app.use('/api/cart', cartRouter);
+app.use('/api/orders', ordersRouter);
+app.use('/api/auth', authRouter);
+// Swagger UI (serves server/openapi.yaml)
+const specPath = path.resolve(__dirname, '../openapi.yaml');
+const swaggerDocument = fs.existsSync(specPath) ? YAML.load(specPath) : {};
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.get('/openapi.yaml', (_req, res) => {
+    res.setHeader('Content-Type', 'application/yaml');
+    res.send(fs.readFileSync(specPath, 'utf8'));
+});
+// Basic error handler
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+app.use((err, _req, res, _next) => {
+    console.error(err);
+    res.status(500).json({ error: 'Internal Server Error' });
+});
+export default app;
+//# sourceMappingURL=app.js.map
