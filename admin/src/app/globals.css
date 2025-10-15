@@ -1,10 +1,15 @@
 @import 'tailwindcss';
 
+/* Import Google Fonts - Hỗ trợ tiếng Việt tốt */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {
   --font-*: initial;
-  --font-outfit: Outfit, sans-serif;
+  /* Thay đổi font mặc định sang Inter hoặc Roboto - hỗ trợ tiếng Việt tốt hơn */
+  --font-outfit: Inter, Roboto, system-ui, -apple-system, sans-serif;
 
   --breakpoint-*: initial;
   --breakpoint-2xsm: 375px;
@@ -189,6 +194,16 @@
   }
   body {
     @apply relative font-normal font-outfit z-1 bg-gray-50;
+    /* Tối ưu rendering tiếng Việt */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern" 1;
+  }
+  
+  /* Đảm bảo font chữ hiển thị tốt cho tiếng Việt */
+  * {
+    font-family: Inter, Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
 }
 
